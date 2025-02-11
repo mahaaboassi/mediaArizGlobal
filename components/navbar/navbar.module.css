@@ -1,0 +1,152 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    top : 20px;
+    right: 0px;
+    left: 0px;
+    border-radius: 20px;
+}
+.navbarFixed{
+    animation: append 0.5s forwards;
+}
+.navbarFixedReturn{
+    animation: appendReturn 0.5s forwards;  
+}
+@keyframes append {
+    from{
+        right: 0px;
+        left: 0px;
+    }to{
+        /* top: 0; */
+        background-color: var(--dark-color);
+        right: 40px;
+        left: 40px;
+        
+    }
+}
+@keyframes appendReturn {
+    from{
+        background-color: var(--dark-color);
+        right: 40px;
+        left: 40px;
+    }to{
+        right: 0px;
+        left: 0px;
+        
+    }
+    
+}
+.navbar ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.navbar ul li{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.menuIcon{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+.menuIcon div{
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--main-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.menuIcon div:nth-child(1) {
+    width: 35px;
+}
+.menuIcon div:nth-child(2) {
+    width: 30px;
+}
+.menuIcon div:nth-child(3) {
+    width: 35px;
+}
+.menuIcon.active div:nth-child(1)  {
+    transform: translateY(8px) rotate(45deg);
+}
+.menuIcon.active div:nth-child(2) {
+    opacity: 0;
+}
+.menuIcon.active div:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+@media (max-width:768px) {
+    .navbar svg{
+        width: 200px;
+    }
+    .navbarFixed{
+        animation: appendMedium 0.5s forwards;
+    }
+    .navbarFixedReturn{
+        animation: appendReturnMedium 0.5s forwards;  
+    }
+
+}
+@media (max-width:500px) {
+    .navbar svg{
+        width: 150px;
+    }
+    .navbarFixed{
+        animation: appendSmall 0.5s forwards;
+    }
+    .navbarFixedReturn{
+        animation: appendReturnSmall 0.5s forwards;  
+    }
+
+    
+}
+@keyframes appendMedium {
+    from{
+        right: 0px;
+        left: 0px;
+    }to{
+        /* top: 0; */
+        background-color: var(--dark-color);
+        right: 20px;
+        left: 20px;
+        
+    }
+}
+@keyframes appendMedium {
+    from{
+        background-color: var(--dark-color);
+        right: 20px;
+        left: 20px;
+    }to{
+        right: 0px;
+        left: 0px;
+        
+    }
+    
+}
+@keyframes appendSmall {
+    from{
+        right: 0px;
+        left: 0px;
+    }to{
+        /* top: 0; */
+        background-color: var(--dark-color);
+        right: 10px;
+        left: 10px;
+        
+    }
+}
+@keyframes appendReturnSmall {
+    from{
+        background-color: var(--dark-color);
+        right: 10px;
+        left: 10px;
+    }to{
+        right: 0px;
+        left: 0px;
+        
+    }
+    
+}

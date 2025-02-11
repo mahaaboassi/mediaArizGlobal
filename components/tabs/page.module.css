@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    justify-content: end;
+
+}
+.list{
+    border: 1.2px solid var(--second-color);
+    width: 170px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.list:has(.content:hover)::after{
+    width: 100%;
+}
+.content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: 0.5s;
+    font-size: var(--font-size-xs);
+
+}
+.active{
+    background-color: var(--second-color);
+}
+.content:hover{
+    transform: scale(1.02);
+}
+.list::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: var(--second-color);
+    transition: 0.5s;
+}
