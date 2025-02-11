@@ -35,7 +35,7 @@
 }
 
 body {
-  color: var(--foreground);
+  color: white !important;
   background: var(--dark-color);
   font-family: Arial, Helvetica, sans-serif;
 
