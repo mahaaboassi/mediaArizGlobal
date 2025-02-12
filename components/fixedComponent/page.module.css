@@ -176,17 +176,11 @@
     }
     
 }
-
-
 @media (max-width:768px) {
     .icon{
         width: 40px;
         height: 40px;
     }   
-    .container{
-        gap: 15px;
-    
-    }
     .viewIcon{
         animation: viewIconSmall 0.2s forwards ease-in;
     }
@@ -244,11 +238,10 @@
         width: 100%;
     }
     .container{
-        bottom: 30px;
+        bottom: 40px;
         top: unset;
         transform: unset;
         gap: 10px;
-    
     }
     .title{
         display: flex;
@@ -296,5 +289,16 @@
             bottom: -310px ;
         }
         
+    }
+}
+@media (max-width:350px){
+    .quote{
+        width: 80%;
+    }
+    .container{
+        bottom: 45px;
+        top: unset;
+        transform: unset;
+        gap: 5px;
     }
 }

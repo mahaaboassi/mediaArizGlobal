@@ -4,6 +4,7 @@ import Style from "./page.module.css"
 import { RootState } from "@/store";
 import { useState ,useEffect} from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const FixedComponent = () => {
     const data  = [{
@@ -12,7 +13,8 @@ const FixedComponent = () => {
         icon : <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 176 169" fill="none">
         <path d="M114.137 123.704C79.895 123.696 52.0314 95.8323 52.0238 61.5984C52.039 52.9219 59.0944 45.859 67.7632 45.859C68.6537 45.859 69.5365 45.9351 70.3738 46.0873C72.2308 46.3917 73.989 47.0234 75.6177 47.9672C75.8536 48.1042 76.0135 48.3325 76.0515 48.5989L79.6667 71.4089C79.7124 71.6753 79.6287 71.9416 79.4536 72.1395C77.4519 74.3543 74.9023 75.945 72.071 76.7441L70.7086 77.1323L71.2262 78.4566C75.8993 90.3373 85.3977 99.8433 97.286 104.516L98.6103 105.034L98.9909 103.664C99.79 100.825 101.381 98.2755 103.595 96.2814C103.755 96.1368 103.968 96.0531 104.189 96.0531C104.235 96.0531 104.288 96.0531 104.334 96.0683L127.136 99.6835C127.41 99.7292 127.631 99.8813 127.775 100.117C128.712 101.746 129.343 103.512 129.655 105.361C129.8 106.191 129.876 107.059 129.876 107.972C129.876 116.641 122.813 123.696 114.137 123.711V123.704Z" fill="white"/>
         <path d="M174.857 77.0639C173.007 56.1947 163.448 36.84 147.937 22.5695C132.334 8.20769 112.082 0.299927 90.9081 0.299927C44.4357 0.299927 6.62459 38.1111 6.62459 84.5835C6.62459 100.178 10.9248 115.377 19.0685 128.613L0.908783 168.821L59.0715 162.626C69.1865 166.766 79.8951 168.867 90.9081 168.867C93.8078 168.867 96.7761 168.715 99.752 168.41C102.378 168.129 105.026 167.718 107.637 167.192C146.559 159.33 174.971 124.784 175.192 85.0325V84.5835C175.192 82.049 175.077 79.5221 174.849 77.0714L174.857 77.0639ZM61.3015 144.976L29.1225 148.401L38.7351 127.113L36.8172 124.533C36.6726 124.343 36.5356 124.153 36.3757 123.94C28.0342 112.424 23.6274 98.8159 23.6274 84.5759C23.6274 47.4726 53.8124 17.2952 90.9081 17.2952C125.667 17.2952 155.122 44.4129 157.96 79.0275C158.113 80.8845 158.189 82.7493 158.189 84.5835C158.189 85.1086 158.181 85.6262 158.166 86.1741C157.45 117.212 135.767 143.568 105.437 150.281C103.124 150.799 100.749 151.187 98.382 151.446C95.9237 151.727 93.4044 151.864 90.9005 151.864C81.988 151.864 73.3268 150.136 65.1375 146.727C64.2317 146.361 63.3413 145.973 62.5041 145.57L61.2863 144.984L61.3015 144.976Z" fill="white"/>
-        </svg>
+        </svg>,
+        link : "https://wa.me/971589185328"
     },{
         name : "mail",
         id : 3,
@@ -25,7 +27,8 @@ const FixedComponent = () => {
         <rect width="30.2643" height="30.2643" fill="white" transform="translate(0.632812 0.00012207)"/>
         </clipPath>
         </defs>
-        </svg>
+        </svg>,
+        link : "mailto:info@arizglobal.com"
     },{
         name : "phone",
         id : 2,
@@ -38,7 +41,8 @@ const FixedComponent = () => {
         <rect width="30.2643" height="30.2643" fill="white" transform="translate(0.632812 0.869751)"/>
         </clipPath>
         </defs>
-        </svg>
+        </svg>,
+        link : "tel:+97142243609"
     }]
     const viewRedux = useSelector((state: RootState) => state.view.value);
     const [isSmall, setIsSmall] = useState<Boolean>(false)
@@ -52,9 +56,9 @@ const FixedComponent = () => {
     return ( <div>
             <div className={`${Style.container} ${viewRedux ? Style.viewIcon: Style.hideIcon}`}>
                 {data.map((e,idx)=>{
-                    return <div aria-label={e.name} className={Style.icon} key={`Social_${e.name}_${idx}`}>
+                    return <Link href={e.link} target="_blank" aria-label={e.name} className={Style.icon} key={`Social_${e.name}_${idx}`}>
                         {e.icon}
-                    </div>
+                    </Link>
                 })}
             </div>
             {/* <div className={`${Style.quote} ${viewRedux && isQuote != 1?(isQuote ==2 ? Style.viewContent:Style.viewContentHide):""} ${viewRedux ? (isSmall?Style.viewQuoteSmall:Style.viewQuote):(isSmall?Style.hideQuoteSmall:Style.hideQuote)}`}> */}
