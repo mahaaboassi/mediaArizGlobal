@@ -23,7 +23,7 @@ function RefComponet() {
         const observer = new IntersectionObserver(handleIntersection, {
         root: null, // Observe with respect to the viewport
         rootMargin: '0px',
-        threshold: 0.5, // Trigger when 50% of the div is visible
+        // threshold: 0.5, // Trigger when 50% of the div is visible
         });
     
         // Start observing the target div

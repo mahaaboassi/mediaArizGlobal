@@ -157,7 +157,7 @@ p{
 }
 
 .btn-yellosh:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   box-shadow: 0 0 20px rgba(202, 158, 103, 0.8), 
               0 0 40px rgba(160, 111, 58, 0.7); /* Stronger golden glow */
 }
@@ -173,7 +173,23 @@ p{
   animation: twinkle 2s infinite alternate ease-in-out;
 }
 
-
+/* Input  */
+form input{
+  background-color: var(--light-color);
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  font-size: var(--font-size-xs);
+  border-radius: 12px;
+}
+input::placeholder{
+  font-size: var(--font-size-xs);
+}
+form label{
+  padding-bottom: 6px;
+  display: block;
+  font-size: var(--font-size-xs);
+}
 @media (max-width:1100px) {
   h1{
     font-size: var(--font-size-xxl);
@@ -212,6 +228,9 @@ p{
   .btn-yellosh{
     padding: 6px 19px;
   }
+  form input{
+    height: 35px;
+}
   
 }
 @media (max-width:500px) {

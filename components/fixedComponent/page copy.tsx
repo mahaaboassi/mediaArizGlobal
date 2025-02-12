@@ -50,15 +50,14 @@ const FixedComponent = () => {
             if(isQuote == 3 || isQuote == 1) setIsQuote(2)
     }
     return ( <div>
-            <div className={`${Style.container} ${viewRedux ? Style.viewIcon: Style.hideIcon}`}>
+            <div className={`${Style.container} ${viewRedux ?(isSmall ? Style.viewIconSmall : Style.viewIcon):(isSmall ? Style.hideIconSmall : Style.hideIcon)}`}>
                 {data.map((e,idx)=>{
                     return <div aria-label={e.name} className={Style.icon} key={`Social_${e.name}_${idx}`}>
                         {e.icon}
                     </div>
                 })}
             </div>
-            {/* <div className={`${Style.quote} ${viewRedux && isQuote != 1?(isQuote ==2 ? Style.viewContent:Style.viewContentHide):""} ${viewRedux ? (isSmall?Style.viewQuoteSmall:Style.viewQuote):(isSmall?Style.hideQuoteSmall:Style.hideQuote)}`}> */}
-            <div className={`${Style.quote} ${viewRedux && isQuote != 1?(isQuote ==2 ? Style.viewContent:Style.viewContentHide):""} ${viewRedux ? Style.viewQuote:Style.hideQuote}`}>
+            <div className={`${Style.quote} ${viewRedux && isQuote != 1?(isQuote ==2 ? Style.viewContent:Style.viewContentHide):""} ${viewRedux ? (isSmall?Style.viewQuoteSmall:Style.viewQuote):(isSmall?Style.hideQuoteSmall:Style.hideQuote)}`}>
                 <div onClick={openQuote} className={`${Style.title} flex  `}>Get A free Qoute!</div>
                 <div onClick={openQuote}  className={` ${Style.containerImg} hidden md:flex !h-full`}>
                     <Image alt={"Quote"} src="/quote.png" className="object-contain"  width={30} height={200} />

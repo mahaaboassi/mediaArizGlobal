@@ -14,7 +14,12 @@
 .hideIcon{
     animation: hideIcon 0.2s forwards ease-in;
 }
-
+.viewIconSmall{
+    animation: viewIconSmall 0.2s forwards ease-in;
+}
+.hideIconSmall{
+    animation: hideIconSmall 0.2s forwards ease-in;
+}
 @keyframes viewIcon {
     from{
         left: -10px;
@@ -36,7 +41,27 @@
     }
     
 }
+@keyframes viewIconSmall {
+    from{
+        right: -10px;
+        opacity: 0;
+    }to{
+        right: 5px;
+        opacity: 1;
+    }
+    
+}
 
+@keyframes hideIconSmall {
+    from{
+        right: 5px;
+        opacity: 1;
+    }to{
+        opacity: 0;
+        right: -10px;
+    }
+    
+}
 .icon{
     width: 40px;
     height: 40px;
@@ -67,15 +92,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    background: var(--light-color); /* Add color to see the dot */
+    background: var(--dark-color); /* Add color to see the dot */
     transition: transform 0.5s, opacity 0.3s;
     opacity: 0;
     visibility: hidden;
     z-index: 10;
-
-}
-.icon:hover path{
-    fill: var(--yellow-dark-color);
 
 }
 .icon:hover::before{
@@ -99,7 +120,6 @@
     color: var(--dark-color) !important;
     text-transform: capitalize;
     height: 50% ;
-    width: 300px;
     font-size: var(--font-size-xs);
     font-weight: 800;
     display: flex;
@@ -109,9 +129,6 @@
     border-top-left-radius: 20px;
     box-shadow: var(--box-universe);
     cursor: pointer;
-}
-.containerImg{
-    width: 40px;
 }
 .title{
     background-color: var(--light-color);
@@ -137,7 +154,12 @@
 .hideQuote{
     animation: hideQuote 0.2s forwards;
 }
-
+.viewQuoteSmall{
+    animation: viewQuoteSmall 0.2s forwards;
+}
+.hideQuoteSmall{
+    animation: hideQuoteSmall 0.2s forwards;
+}
 .viewContent{
     animation: viewContent 0.2s forwards;
 }
@@ -146,9 +168,9 @@
 }
 @keyframes viewContent {
     from{
-        right: -270px ;
+        right: -310px ;
     }to{
-        right: 0;
+        right: 0px;
     }
     
 }
@@ -156,27 +178,42 @@
     from{
         right: 0;
     }to{
-        right:-270px;
+        right: -310px ;
     }
     
 }
 @keyframes viewQuote {
     from{
-        right: -300px;
+        right: -400px;
     }to{
-        right: -270px ;
+        right: -310px ;
     }
     
 }
 @keyframes hideQuote {
     from{
-        right: -270px  ;
+        right: -310px ;
     }to{
-        right: -300px;
+        right: -400px;
     }
     
 }
-
+@keyframes viewQuoteSmall {
+    from{
+        bottom : -500px;
+    }to{
+        bottom: -300px;
+    }
+    
+}
+@keyframes hideQuoteSmall {
+    from{
+        bottom: -300px;
+    }to{
+        bottom: -500px;
+    }
+    
+}
 
 @media (max-width:768px) {
     .icon{
@@ -187,40 +224,13 @@
         gap: 15px;
     
     }
-    .viewIcon{
-        animation: viewIconSmall 0.2s forwards ease-in;
-    }
-    .hideIcon{
-        animation: hideIconSmall 0.2s forwards ease-in;
-    }
-    @keyframes viewIconSmall {
-        from{
-            right: -10px;
-            opacity: 0;
-        }to{
-            right: 5px;
-            opacity: 1;
-        }
-        
-    }
-    
-    @keyframes hideIconSmall {
-        from{
-            right: 5px;
-            opacity: 1;
-        }to{
-            opacity: 0;
-            right: -10px;
-        }
-        
-    }
     .icon svg{
         width:22px
     }
     .quote{
         top:unset; 
+        width: 50%; 
         left: 50%;
-        height: 350px;
         transform: translateX(-50%);
         padding: unset;
         flex-direction: column;
@@ -229,14 +239,12 @@
         border-bottom-left-radius: 0;
     }
     .containerImg{
-       
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         border-bottom-left-radius: 0;   
     }
     .title{
-        height: 40px;
-        font-weight: 900;
+        padding:10px;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
     }
@@ -253,28 +261,6 @@
     .title{
         display: flex;
     }
-    .viewQuote{
-        animation: viewQuoteSmall 0.2s forwards;
-    }
-    .hideQuote{
-        animation: hideQuoteSmall 0.2s forwards;
-    }
-    @keyframes viewQuoteSmall {
-        from{
-            bottom : -360px;
-        }to{
-            bottom: -315px;
-        }
-        
-    }
-    @keyframes hideQuoteSmall {
-        from{
-            bottom: -315px;
-        }to{
-            bottom: -360px;
-        }
-        
-    }
     .viewContent{
         animation: viewContentSmall 0.2s forwards;
     }
@@ -283,15 +269,15 @@
     }
     @keyframes viewContentSmall {
         from{
-            bottom: -315px ;
+            bottom: -310px ;
         }to{
-            bottom: -10px 
+            bottom: 0px 
         }
         
     }
     @keyframes viewContentHideSmall {
         from{
-            bottom: -10px ;
+            bottom: 0px ;
         }to{
             bottom: -310px ;
         }
