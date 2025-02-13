@@ -56,7 +56,7 @@ function Technologies() {
                 </div>
                 
                 <div className="hidden md:flex justify-center items-center">
-                   <Image width={600} height={600} src="/Frame 247.png" alt="brain" />
+                   <Image width={600} height={600} src="/global2.png" alt="brain" />
                 </div>
                 
             </div>

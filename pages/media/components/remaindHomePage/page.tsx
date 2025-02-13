@@ -5,6 +5,8 @@ import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import WhatWeDo from "../whatWeDo/page";
 import Technologies from "../technologies/page";
+import Steps from "../steps/page";
+import FAQs from "../faq/page";
 
 function RefComponet() {
     const targetRef = useRef<null>(null);
@@ -39,6 +41,8 @@ function RefComponet() {
     return ( <div ref={targetRef}>
         <WhatWeDo/>
         <Technologies/>
+        <Steps/>
+        <FAQs/>
 
     </div> );
 }

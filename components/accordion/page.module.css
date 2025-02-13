@@ -1,0 +1,69 @@
+.container{
+
+    /* background-color: var(--second-color); */
+    background: linear-gradient(to left, var(--dark-color),var(--second-color));
+    box-shadow: var(--box-universe);
+    border-radius: 12px;
+}
+.target{
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: var(--font-size-s);
+}
+.content{
+    font-size: var(--font-size-xs);
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.2s ease,height 0.3s ease; 
+    overflow: hidden;
+}
+.icon{
+    font-weight: 600;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.contentActive{
+    opacity: 1;
+    height: 140px;
+}
+.iconFirst{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+    background-color: var(--light-color);
+    width: 20px;
+    height: 3px;
+    z-index: 10;
+    transition: opacity 0.3s ease, transform 0.5s ease; 
+
+}
+.iconSecond{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    background-color: var(--light-color);
+    width: 20px;
+    height: 3px;
+    z-index: 10;
+    transition: transform 0.5s ease; 
+}
+.iconFirstActive{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--light-color);
+    transform: translate(-50%,-50%) rotate(90deg);
+    width: 20px;
+    height: 3px;
+    z-index: 10;
+    animation: appeandIcon 0.3s forwards;
+
+}
+@keyframes appeandIcon {
+    from{opacity: 1;}
+    to{ opacity: 0;}
+    
+}

@@ -84,6 +84,7 @@ p{
               0 0 30px rgba(202, 158, 103, 0.5);  */
 }
 
+
 /* ✨ Shooting Star Effect */
 .btn-universe::before {
   content: "";
@@ -109,16 +110,6 @@ p{
               0 0 40px rgba(202, 158, 103, 0.7);  */
 }
 
-/* ✨ Twinkling Stars Effect */
-@keyframes twinkle {
-  0% { box-shadow: 0 0 10px rgba(132, 130, 129, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(126, 125, 124, 0.6); }
-  100% { box-shadow: 0 0 10px rgba(143, 143, 143, 0.3); }
-}
-
-.btn-universe {
-  animation: twinkle 2s infinite alternate ease-in-out;
-}
 .btn-yellosh {
   background: linear-gradient(to left, var(--yellow-dark-color), var(--main-color)); /* Gold gradient */
   text-transform: capitalize;
@@ -174,6 +165,13 @@ p{
 }
 
 /* Input  */
+form textarea{
+  background-color: var(--light-color);
+  width: 100%;
+  padding: 10px;
+  font-size: var(--font-size-xs);
+  border-radius: 12px;
+}
 form input{
   background-color: var(--light-color);
   width: 100%;
@@ -182,6 +180,7 @@ form input{
   font-size: var(--font-size-xs);
   border-radius: 12px;
 }
+
 input::placeholder{
   font-size: var(--font-size-xs);
 }

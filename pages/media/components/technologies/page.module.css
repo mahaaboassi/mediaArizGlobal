@@ -16,6 +16,7 @@
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    background-color: var(--yellow-dark-color);
 }
 /* ✨ Shooting Star Effect */
 .hover::before {
