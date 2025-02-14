@@ -1,7 +1,7 @@
 "use client"
 // This component wraps the application with Redux provider. 
 import { Provider } from "react-redux";
-import { store } from "@/store";
+import { store } from "@/store/index";
 
 interface ChildrenProps {
   children : React.ReactNode

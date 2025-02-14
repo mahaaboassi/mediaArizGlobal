@@ -45,14 +45,14 @@ function Clients() {
     <path d="M15.9502 22.94L6.0002 22.94L6.0002 12.98L9.9902 5L14.9502 5L10.9802 12.98L15.9502 12.98L15.9502 22.94Z" fill="url(#paint1_linear_150_45)"/>
     <defs>
     <linearGradient id="paint0_linear_150_45" x1="22.9752" y1="5" x2="22.9752" y2="22.94" gradientUnits="userSpaceOnUse">
-    <stop stop-color="white"/>
-    <stop offset="0.5" stop-color="#E1D0BE"/>
-    <stop offset="1" stop-color="#A06F3A"/>
+    <stop stopColor="white"/>
+    <stop offset="0.5" stopColor="#E1D0BE"/>
+    <stop offset="1" stopColor="#A06F3A"/>
     </linearGradient>
     <linearGradient id="paint1_linear_150_45" x1="10.9752" y1="5" x2="10.9752" y2="22.94" gradientUnits="userSpaceOnUse">
-    <stop stop-color="white"/>
-    <stop offset="0.5" stop-color="#E1D0BE"/>
-    <stop offset="1" stop-color="#A06F3A"/>
+    <stop stopColor="white"/>
+    <stop offset="0.5" stopColor="#E1D0BE"/>
+    <stop offset="1" stopColor="#A06F3A"/>
     </linearGradient>
     </defs>
     </svg>
@@ -85,14 +85,14 @@ function Clients() {
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_150_45" result="shape"/>
     </filter>
     <linearGradient id="paint0_linear_150_45" x1="22.9752" y1="5" x2="22.9752" y2="22.94" gradientUnits="userSpaceOnUse">
-    <stop stop-color="white"/>
-    <stop offset="0.5" stop-color="#E1D0BE"/>
-    <stop offset="1" stop-color="#A06F3A"/>
+    <stop stopColor="white"/>
+    <stop offset="0.5" stopColor="#E1D0BE"/>
+    <stop offset="1" stopColor="#A06F3A"/>
     </linearGradient>
     <linearGradient id="paint1_linear_150_45" x1="9.9752" y1="5" x2="9.9752" y2="22.94" gradientUnits="userSpaceOnUse">
-    <stop stop-color="white"/>
-    <stop offset="0.5" stop-color="#E1D0BE"/>
-    <stop offset="1" stop-color="#A06F3A"/>
+    <stop stopColor="white"/>
+    <stop offset="0.5" stopColor="#E1D0BE"/>
+    <stop offset="1" stopColor="#A06F3A"/>
     </linearGradient>
     </defs>
     </svg>

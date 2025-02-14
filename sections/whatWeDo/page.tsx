@@ -2828,7 +2828,7 @@ function WhatWeDo() {
     
     const [selectedObj, setSelectedObj] = useState<Service>(data[0]);
     const svg = <svg xmlns="http://www.w3.org/2000/svg" width="200" height="194" viewBox="0 0 107 94" fill="none">
-    <g clip-path="url(#clip0_51_43)">
+    <g clipPath="url(#clip0_51_43)">
     <circle cx="8" cy="8" r="5" fill="#C3996B"/>
     <circle cx="21" cy="8" r="5" fill="#C3996B"/>
     <circle cx="34" cy="8" r="5" fill="#C3996B"/>

@@ -1,7 +1,7 @@
 "use client"
 
 import { changeValue } from "@/store/slices/view";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import WhatWeDo from "../whatWeDo/page";
 import Technologies from "../technologies/page";
@@ -10,16 +10,19 @@ import FAQs from "../faq/page";
 import Services from "../services/page";
 import Clients from "../clients/page";
 
-function RefComponet() {
-    const targetRef = useRef<null>(null);
-    const dispatch = useDispatch()
+interface PropsInfo{
+  returnedValue : (value:boolean) =>void
+}
+const  RefComponet:React.FC<PropsInfo>= ({returnedValue}) => {
+    const targetRef = useRef<HTMLDivElement | null>(null);
+    
     useEffect(() => {
         const handleIntersection = (entries: IntersectionObserverEntry[]) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-              dispatch(changeValue(true))
+              returnedValue(true)
             } else {
-              dispatch(changeValue(false))
+              returnedValue(false)
             }
         });
         };

@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import viewReducer from "./slices/view"; 
+import viewSlice from "./slices/view"; 
 import threeStatusSlice from "./slices/hideThree"; 
 
 
 export const store = configureStore({
   reducer: {
-    view: viewReducer,
+    view: viewSlice,
     status : threeStatusSlice
   },
 });

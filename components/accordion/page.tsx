@@ -16,7 +16,7 @@ const AccordionComponent:React.FC<DataProps> = ({question, answer,isOpen,onClick
                 {/* {isOpen?<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M0.5 7H13.5" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>:<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <g clip-path="url(#clip0_1222_36554)">
+                    <g clipPath="url(#clip0_1222_36554)">
                     <path d="M7 0.5V13.5" stroke="white" stroke-linecap="round" strokeLinejoin="round"/>
                     <path d="M0.5 6.95996H13.5" stroke="white" stroke-linecap="round" strokeLinejoin="round"/>
                     </g>

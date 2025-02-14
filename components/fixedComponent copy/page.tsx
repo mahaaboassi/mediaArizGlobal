@@ -1,12 +1,16 @@
 "use client"
-import { useSelector } from "react-redux";
+
 import Style from "./page.module.css"
-import { RootState } from "@/store";
+import { RootState } from "@/store/index";
 import { useState ,useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
-const FixedComponent = () => {
+interface PropsView {
+    viewRedux : Boolean
+}
+const FixedComponent:React.FC<PropsView> = ({viewRedux}) => {
     const data  = [{
         name : "whatsapp",
         id : 1,
@@ -44,11 +48,14 @@ const FixedComponent = () => {
         </svg>,
         link : "tel:+97142243609"
     }]
-    const viewRedux = useSelector((state: RootState) => state.view.value);
+
     const [isSmall, setIsSmall] = useState<Boolean>(false)
     const [ isQuote, setIsQuote] = useState<number>(1)
     useEffect(() => {if(window.innerWidth <= 768) setIsSmall(true)}, [])
-    useEffect(() => {setIsQuote(1)}, [viewRedux])
+    useEffect(() => {setIsQuote(1)
+        console.log("55",viewRedux);
+        
+    }, [viewRedux])
     const openQuote = ()=>{
             if(isQuote == 2 ) setIsQuote(3)
             if(isQuote == 3 || isQuote == 1) setIsQuote(2)
