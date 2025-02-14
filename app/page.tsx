@@ -58,7 +58,8 @@ function Home() {
   return (
     <div>
 
-      <div style={{ marginBottom: `${marginBottom-120}px` }} className="container-home">
+      {/* <div style={{ marginBottom: `${marginBottom-120}px` }} className="container-home"> */}
+      <div  className="container-home">
         <ThreeDScene />
         <Navbar />
         <FixedComponent />
