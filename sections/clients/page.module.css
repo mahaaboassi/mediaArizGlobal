@@ -1,0 +1,45 @@
+.container{
+    position: relative;
+   
+}
+.card{
+    background: linear-gradient(to left, var(--dark-color),var(--second-color));
+    /* box-shadow: var(--box-universe); */
+    width: 100%;
+    border-radius: 12px;
+
+}
+.card{
+    
+}
+.card p{
+    font-size: var(--font-size-xs);
+    height: 80px;
+   
+}
+
+.line{
+    height: 1px;
+    width: 90%;
+    background-color: var(--grey-background);
+    opacity: 0.3;
+
+}
+.info{
+
+}
+.info img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.info h5{
+    font-weight: 600;
+    font-size: var(--font-size-s);
+}
+.info h6{
+    font-size: var(--font-size-xs);
+    color: var(--grey-background);
+    opacity: 0.6;
+}

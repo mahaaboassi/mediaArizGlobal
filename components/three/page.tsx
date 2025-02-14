@@ -1,12 +1,14 @@
 "use client"
  
+import { RootState } from '@/store';
 import React, { useEffect, useRef } from 'react';  
+import { useSelector } from 'react-redux';
 import * as THREE from 'three';  
 
 const ThreeDScene = () => {  
     const mountRef = useRef<HTMLDivElement | null>(null);  
     let renderer: THREE.WebGLRenderer | null = null; 
-
+    const value = useSelector((state: RootState) => state.status.value)
     useEffect(() => {  
         if(mountRef.current ){
             const scene = new THREE.Scene();  
@@ -58,7 +60,7 @@ const ThreeDScene = () => {
         };  
     }, []);  
 
-    return <div ref={mountRef}  style={{ width: '100vw', height: '100vh', position:"fixed"}} />;  
+    return <div ref={mountRef}  style={{ zIndex:value?"-1":"0",width: '100vw', height: '100vh', position:"fixed"}} />;  
 };  
 
 export default ThreeDScene; 

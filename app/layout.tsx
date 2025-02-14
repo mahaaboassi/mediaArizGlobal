@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from 'next/font/google'; 
 import "./globals.css";
+import WrapperPage from "./_page";
 
 const montserrat = Montserrat({
   subsets: ['latin'],  // You can add more subsets if you need them (e.g., ['latin', 'latin-ext'])
@@ -23,7 +24,7 @@ export default function RootLayout({
       <body
         className={` ${montserrat.className} antialiased`}
       >
-        {children}
+        <WrapperPage>{children}</WrapperPage>
       </body>
     </html>
   );

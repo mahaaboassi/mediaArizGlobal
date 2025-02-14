@@ -1,0 +1,40 @@
+.container{
+    position: relative;
+}
+.container h2{
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+}
+.container span{
+    color: var(--main-color);
+    font-weight: 600;
+}
+.hover{
+    transition: 0.5s;
+    box-shadow: var(--box-universe);
+    width: fit-content;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--yellow-dark-color);
+}
+/* ✨ Shooting Star Effect */
+.hover::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0) 50%);
+    transform: rotate(25deg);
+    opacity: 0.4;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .hover:hover::before {
+    top: 100%;
+    left: 100%;
+  }
+  
+

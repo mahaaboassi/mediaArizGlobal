@@ -7,6 +7,8 @@
     text-align: center;
     font-weight: 900 !important;
     text-transform: uppercase;
+    max-width: 550px;
+    margin: auto;
 
 }
 .container h3{

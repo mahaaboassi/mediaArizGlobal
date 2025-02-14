@@ -1,9 +1,7 @@
-import MediaPage from "@/pages/media/page";
-import WrapperPage from "@/pages/wrapperPage/page";
+import HomePage from "@/pages/home/page";
 
 export default function Home() {
-
   return (
-    <WrapperPage children={<MediaPage/>}/>
+    <HomePage/>
   );
 }
