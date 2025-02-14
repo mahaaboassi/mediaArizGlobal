@@ -58,6 +58,12 @@
     .number {
         font-size: 3.5rem;
     }
+    .number {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -40px;
+    }
 }
 @media (max-width:638px) {
     .container{
