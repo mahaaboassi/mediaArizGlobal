@@ -37,7 +37,7 @@ function Technologies() {
         },
       ];
     return ( <div>
-        <div className={`${Style.container} grid grid-cols-1 md:grid-cols-2 py-12 px-5 sm:px-10 md:px-20`}>
+        <div className={`${Style.container} grid grid-cols-1 md:flex-row  md:grid-cols-2 py-12 px-5 sm:px-10 md:px-20`}>
         
                 <div className="gap-5 flex flex-col justify-center">
                     <h2>Elevate Your Business with Expert Solutions</h2>
@@ -55,7 +55,7 @@ function Technologies() {
                     </div>
                 </div>
                 
-                <div className="hidden md:flex justify-center items-center">
+                <div className="flex justify-center items-center">
                    <Image width={600} height={600} src="/Globe map HD.gif" alt="brain" />
                 </div>
                 
