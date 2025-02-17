@@ -14,6 +14,20 @@
 .navbarFixedReturn{
     animation: appendReturn 0.5s forwards;  
 }
+@keyframes movingShadow {
+    0% { text-shadow: -5px 0 10px grey; }
+    50% { text-shadow: 5px 0 15px grey; }
+    100% { text-shadow: -5px 0 10px grey; }
+}
+
+.phone{
+    font-weight: 700;
+    /* text-shadow: 0 2px 2px var(--dark-color),
+    0 2px 2px white; */
+    color: white;
+    animation: movingShadow 3s infinite linear;
+
+}
 @keyframes append {
     from{
         right: 0px;
@@ -98,6 +112,9 @@
     }
     .navbarFixedReturn{
         animation: appendReturnSmall 0.5s forwards;  
+    }
+    .phone{
+        font-size: 0.7rem;
     }
 
     

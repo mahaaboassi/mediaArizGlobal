@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import Style from "./navbar.module.css"
+import Link from "next/link";
 
 
 const logo = <svg xmlns="http://www.w3.org/2000/svg" width="239" height="69" viewBox="0 0 239 69" fill="none">
@@ -164,14 +165,10 @@ function Navbar() {
         <div>
             {logo}
         </div>
-        <div className="flex items-center">
-            {/* <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>News</li>
-            </ul> */}
-            <button className="btn-yellosh">get a Quote</button>
+        
+        <div className="flex items-center gap-5">
+            <div className={`flex items-center px-2  ${Style.phone}`}><Link href={"tel:+971589185328"}>+971 58 918 5328</Link></div>
+            <button className="btn-yellosh hidden md:flex">get a Quote</button>
         </div>
     </div> );
 }

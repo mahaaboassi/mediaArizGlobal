@@ -2,20 +2,6 @@ import Image from "next/image";
 import Style from "./page.module.css"
 
 function HeroForm() {
-    // const data = [
-    //     {
-    //       name: "Tik Tok",
-    //       icon: "/tikTok.png"
-    //     },
-    //     {
-    //       name: "Instagram",
-    //       icon: "/instagram.png"
-    //     },
-    //     {
-    //       name: "Facebook",
-    //       icon: "/facebook.png"
-    //     },
-    //   ];
     const data = [
       {
         name: "Review Google",

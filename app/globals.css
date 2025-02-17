@@ -239,7 +239,8 @@ form label{
     font-size: var(--font-size-s);
   }
   .container-home{
-    margin-bottom: 600px;
+    /* margin-bottom: 600px; */
+    margin-bottom: 0px;
   }
 }
 @media (max-width:768px) {
@@ -263,16 +264,16 @@ form label{
     height: 35px;
 }
 .container-home{
-  margin-bottom: 500px;
+  /* margin-bottom: 500px; */
 }
   
 }
 @media (max-width:500px) {
   h1{
-    font-size: var(--font-size-xl);
+    font-size: 1.5rem;
   }
   h2{
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-xl) !important;
   }
   h3{
     /* font-size: var(--font-size-l); */
@@ -286,8 +287,8 @@ form label{
   .btn-yellosh{
     padding: 6px 12px;
   }
-  .container-home{
+  /* .container-home{
     margin-bottom: 400px;
-  }
+  } */
   
 }

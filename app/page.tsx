@@ -15,12 +15,6 @@ import FixedComponent from "@/components/fixedComponent/page";
 import RefComponet from "@/sections/remaindHomePage/page";
 import Footer from "@/components/footer/page";
 
-import WhatWeDo from "@/sections/whatWeDo/page";
-import Technologies from "@/sections/technologies/page";
-import Steps from "@/sections/steps/page";
-import FAQs from "@/sections/faq/page";
-import Services from "@/sections/services/page";
-import Clients from "@/sections/clients/page";
 
 function Home() {
   const footerRef = useRef<HTMLDivElement | null>(null);
