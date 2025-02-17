@@ -202,27 +202,19 @@ form label{
   display: block;
   font-size: var(--font-size-xs);
 }
-/* Layout To Fixed Footer */
-.container-home{
-  margin-bottom: 700px;
-  background-color: var(--dark-color);
-}
+
 @media (max-width:1200px) {
   h1{
     font-size: var(--font-size-xxl);
   }
-  .container-home{
-    margin-bottom: 600px;
-  }
+
 }
 
 @media (max-width:1100px) {
   h1{
     font-size: var(--font-size-xxl);
   }
-  .container-home{
-    margin-bottom: 600px;
-  }
+
 }
 @media (max-width:1024px) {
 
@@ -237,10 +229,6 @@ form label{
   }
   p{
     font-size: var(--font-size-s);
-  }
-  .container-home{
-    /* margin-bottom: 600px; */
-    margin-bottom: 0px;
   }
 }
 @media (max-width:768px) {
@@ -263,9 +251,7 @@ form label{
   form input{
     height: 35px;
 }
-.container-home{
-  /* margin-bottom: 500px; */
-}
+
   
 }
 @media (max-width:500px) {
@@ -287,8 +273,6 @@ form label{
   .btn-yellosh{
     padding: 6px 12px;
   }
-  /* .container-home{
-    margin-bottom: 400px;
-  } */
+
   
 }

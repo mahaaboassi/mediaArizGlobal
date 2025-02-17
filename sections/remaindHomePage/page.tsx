@@ -9,6 +9,7 @@ import Steps from "../steps/page";
 import FAQs from "../faq/page";
 import Services from "../services/page";
 import Clients from "../clients/page";
+import Footer from "@/components/footer/page";
 
 interface PropsInfo{
   returnedValue : (value:boolean) =>void
@@ -50,6 +51,7 @@ const  RefComponet:React.FC<PropsInfo>= ({returnedValue}) => {
         <Services/>
         <FAQs/>
         <Clients/>
+        <Footer/>
 
 
     </div> );

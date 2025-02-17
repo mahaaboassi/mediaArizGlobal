@@ -13,7 +13,6 @@ import Icons from "@/sections/icons/page";
 
 import FixedComponent from "@/components/fixedComponent/page";
 import RefComponet from "@/sections/remaindHomePage/page";
-import Footer from "@/components/footer/page";
 
 
 function Home() {
@@ -53,7 +52,7 @@ function Home() {
     <div>
 
       {/* <div style={{ marginBottom: `${marginBottom-120}px` }} className="container-home"> */}
-      <div  className="container-home">
+      <div >
         <ThreeDScene />
         <Navbar />
         <FixedComponent />
@@ -66,9 +65,8 @@ function Home() {
         
            
         
-        <div ref={footerRef}></div>
+        {/* <div ref={footerRef}></div> */}
       </div>
-      <Footer />
     </div>
   );
 }
