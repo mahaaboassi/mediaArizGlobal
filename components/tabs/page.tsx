@@ -7,8 +7,9 @@ interface Service {
     subTitle :string,
     description: string;
     id: number;
-    content?: { name: string; id: number; description: string; icon?: string }[];
+    content?: { name: string; id: number; description: string}[];
     svg: string;
+    image : string
 }
 
 interface DataProps {

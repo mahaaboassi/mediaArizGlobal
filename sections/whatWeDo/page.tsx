@@ -9,9 +9,9 @@ interface Service {
     subTitle :string,
     description: string;
     id: number;
-    content?: { name: string; id: number; description: string; icon?: string }[];
+    content?: { name: string; id: number; description: string}[];
     svg: string;
-    image : ""
+    image : string
 }
 
 function WhatWeDo() {
@@ -22,11 +22,11 @@ function WhatWeDo() {
             description: "Digital marketing is the practice of promoting brands, products, or services using online channels such as social media, search engines, email, and websites. It includes strategies like SEO, content marketing, PPC advertising, and social media marketing to reach and engage target audiences effectively.",
             id: 1,
             content: [
-                { name: "Digital Marketing", id: 11, description: "We strategically optimize your brand and audience across all platforms.", icon: "" },
+                { name: "Digital Marketing", id: 11, description: "We strategically optimize your brand and audience across all platforms."},
                 { name: "Global Network", id: 12, description: "We help you create new partnerships between luxury brands." },
-                { name: "Social Media Marketing", id: 13, description: "We help our clients engage with their relevant audience to gain positive reach.", icon: "" },
-                { name: "Influencer Marketing", id: 14, description: "We target influencers who make a real buzz for your brand.", icon: "" },
-                { name: "Public Relations", id: 15, description: "Our approach is fresh and aligned with today's media landscape.", icon: "" }
+                { name: "Social Media Marketing", id: 13, description: "We help our clients engage with their relevant audience to gain positive reach."},
+                { name: "Influencer Marketing", id: 14, description: "We target influencers who make a real buzz for your brand." },
+                { name: "Public Relations", id: 15, description: "Our approach is fresh and aligned with today's media landscape." }
             ],
             image: "/marketing.png",
             svg :""
