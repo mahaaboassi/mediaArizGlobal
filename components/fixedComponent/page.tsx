@@ -5,6 +5,7 @@ import { RootState } from "@/store";
 import { useState ,useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
+import FormUser from "../form/page";
 
 const FixedComponent = () => {
     const data  = [{
@@ -67,21 +68,9 @@ const FixedComponent = () => {
                 <div onClick={openQuote}  className={` ${Style.containerImg} hidden md:flex !h-full`}>
                     <Image alt={"Quote"} src="/quote.png" className="object-contain"  width={30} height={200} />
                 </div>
-                <form className={`${Style.content} flex flex-col justify-center gap-5 `}>
-                    <h4>Reserve your discount today!</h4>
-                    <div>
-                        <input placeholder="Name" />
-                    </div>
-                    <div className="">
-                        <input placeholder="Email" />
-                    </div>
-                    <div>
-                        <input placeholder="Number" />
-                    </div>
-                    <div>
-                        <button className="w-full btn-yellosh">Submit</button>
-                    </div>
-                </form>
+                <div className={`${Style.content} `}>
+                    <FormUser fromFixedComponent={true} isAppendLabel={false} />
+                </div>
                 
             </div>
         </div>

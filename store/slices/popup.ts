@@ -1,23 +1,23 @@
 
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";  
 
-interface ViewState {  
+interface PopupState {  
   value: boolean; // or the appropriate type for your use case  
 }  
 
-const initialState: ViewState = {  
+const initialState: PopupState = {  
   value: false, // initial value  
 };  
 
-const viewSlice = createSlice({  
-  name: "view",  
+const popupSlice = createSlice({  
+  name: "popup",  
   initialState,  
   reducers: {  
-    changeValue: (state, action: PayloadAction<boolean>) => {  
+    openPopup: (state, action: PayloadAction<boolean>) => {  
       state.value = action.payload;  
     },  
   },  
 });  
 
-export const { changeValue } = viewSlice.actions;  
-export default viewSlice.reducer;
+export const { openPopup } = popupSlice.actions;  
+export default popupSlice.reducer;

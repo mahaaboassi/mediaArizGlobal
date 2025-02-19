@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Style from "./page.module.css"
+import FormUser from "@/components/form/page";
 
 function HeroForm() {
     const data = [
@@ -32,26 +33,7 @@ function HeroForm() {
                 </div>
                 
                 <div className="flex items-center justify-center md:justify-end ">
-                   <form className="p-5">
-                        <div className="pb-5">
-                            <h3>Reserve your discount today!</h3>
-                        </div>
-                        <div>
-                            <label >What's your Name</label>
-                            <input id="name" placeholder="Name"  />
-                        </div>
-                        <div className="py-5">
-                            <label >What's your Email?</label>
-                            <input placeholder="Email"  />
-                        </div>
-                        <div className="pb-5">
-                            <label >What's your Phone?</label>
-                            <input placeholder="Phone"  />
-                        </div>
-                        <div className="">
-                            <button className={`${Style.hover} w-full`}>Submit</button>
-                        </div>
-                   </form>
+                   <FormUser fromFixedComponent={false} isAppendLabel={true} />
                 </div>
                 
             </div>

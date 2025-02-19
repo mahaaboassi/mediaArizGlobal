@@ -135,7 +135,10 @@ const logo = <svg xmlns="http://www.w3.org/2000/svg" width="239" height="69" vie
 <path d="M224.17 48.9189V49.4141H219.923V44.2151H224.098V44.7103H220.571V46.567H223.667V47.0622H220.571V48.9808H224.17V48.9189Z" fill="#C3996B"/>
 <path d="M226.33 44.1532H228.778C229.426 44.1532 230.002 44.277 230.505 44.4627C231.009 44.7102 231.369 45.0197 231.657 45.391C231.945 45.7624 232.089 46.2575 232.089 46.7527C232.089 47.2478 231.945 47.6811 231.657 48.1143C231.369 48.4857 231.009 48.7951 230.505 49.0427C230.002 49.2903 229.426 49.3522 228.778 49.3522H226.33V44.1532ZM228.778 48.9189C229.282 48.9189 229.786 48.857 230.145 48.6713C230.577 48.4857 230.865 48.2381 231.081 47.9286C231.297 47.6192 231.441 47.2478 231.441 46.8146C231.441 46.3813 231.297 46.01 231.081 45.7005C230.865 45.391 230.577 45.1435 230.145 44.9578C229.714 44.7721 229.282 44.7102 228.778 44.7102H226.978V48.9808H228.778V48.9189Z" fill="#C3996B"/>
 </svg>
-function Navbar() {
+interface PropsNav {
+ callPopup : ()=> Boolean
+}
+const Navbar :React.FC<PropsNav>  = ({callPopup}) => {
     const [open, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState<number>(3);
 
@@ -168,7 +171,7 @@ function Navbar() {
         
         <div className="flex items-center gap-5">
             <div className={`flex items-center px-2  ${Style.phone}`}><Link href={"tel:+971589185328"}>+971 58 918 5328</Link></div>
-            <button className="btn-yellosh hidden md:flex">get a Quote</button>
+            <button onClick={()=>callPopup()} className="btn-yellosh hidden md:flex">get a Quote</button>
         </div>
     </div> );
 }

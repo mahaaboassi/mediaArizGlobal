@@ -12,9 +12,10 @@ import Clients from "../clients/page";
 import Footer from "@/components/footer/page";
 
 interface PropsInfo{
-  returnedValue : (value:boolean) =>void
+  returnedValue : (value:boolean) =>void,
+  handlePopup : (value:boolean) =>void
 }
-const  RefComponet:React.FC<PropsInfo>= ({returnedValue}) => {
+const  RefComponet:React.FC<PropsInfo>= ({returnedValue,handlePopup}) => {
     const targetRef = useRef<HTMLDivElement | null>(null);
     
     useEffect(() => {
@@ -46,7 +47,7 @@ const  RefComponet:React.FC<PropsInfo>= ({returnedValue}) => {
         }, []);
     return ( <div ref={targetRef}>
         <WhatWeDo/>
-        <Technologies/>
+        <Technologies handlePopup={(res)=>handlePopup(res)} />
         <Steps/>
         <Services/>
         <FAQs/>

@@ -13,59 +13,41 @@ import Icons from "@/sections/icons/page";
 
 import FixedComponent from "@/components/fixedComponent/page";
 import RefComponet from "@/sections/remaindHomePage/page";
+import PopupAlert from "@/components/popup/page";
+import { openPopup } from "@/store/slices/popup";
 
 
 function Home() {
-  const footerRef = useRef<HTMLDivElement | null>(null);
+  const popupRef = useRef<HTMLDivElement | null>(null);
   const [marginBottom, setMarginBottom] = useState<number>(0);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
-        if (entry.target === footerRef.current) {
-          dispatch(changeThree(entry.isIntersecting));
-          console.log("bla three",entry.isIntersecting);
-        }
-      });
-    };
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    const observer = new IntersectionObserver(handleIntersection, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5, // Adjust as needed
-    });
+  const handlePopup = (): boolean => {
+      setIsPopupOpen((prev) => !prev); // Toggle state
+      dispatch(openPopup(!isPopupOpen)) 
+      return !isPopupOpen; // Return updated state
+  };
 
-    // Observe both elements
-    if (footerRef.current) observer.observe(footerRef.current);
-    // Set marginBottom dynamically
-    if (typeof window !== "undefined") {
-      setMarginBottom(window.innerHeight);
-    }
 
-    return () => {
-      if (footerRef.current) observer.unobserve(footerRef.current);
-    };
-  }, []);
-  const viewRedux = useSelector((state: RootState) => state.view.value);
   return (
     <div>
 
       {/* <div style={{ marginBottom: `${marginBottom-120}px` }} className="container-home"> */}
       <div >
         <ThreeDScene />
-        <Navbar />
+        <Navbar callPopup={handlePopup} />
         <FixedComponent />
         <HeroForm />
         <Icons />
         <div className="lg:h-10" ></div>
-        <RefComponet returnedValue={(res)=>{
+        <RefComponet handlePopup={(res)=>handlePopup()} returnedValue={(res)=>{
           dispatch(changeValue(res));
         }} />
         
-           
-        
-        {/* <div ref={footerRef}></div> */}
+          
+        <PopupAlert handlePopup={handlePopup}/>
       </div>
     </div>
   );

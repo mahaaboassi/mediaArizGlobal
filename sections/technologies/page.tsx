@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Style from "./page.module.css"
 
-function Technologies() {
+interface PropsTech{
+  handlePopup : (value:boolean) =>void
+}
+const  Technologies:React.FC<PropsTech> = ({handlePopup})=> {
     const technologies = [
         {
           name: "Social Media Marketing",
@@ -43,7 +46,7 @@ function Technologies() {
                     <h2>Elevate Your Business with Expert Solutions</h2>
                     <p >At <span>Ariz Global</span>, we focus on turning your vision into reality with our tailored web development, digital marketing, and design solutions. Our team's deep expertise and commitment to quality have helped clients across various industries achieve their goals.</p>
                     <p >Let us help you create a lasting digital presence with innovative strategies and cutting-edge technologies.</p>
-                    <div className={`${Style.hover} py-3 px-5 flex items-center cursor-pointer `}>
+                    <div onClick={()=>handlePopup(true)} className={`${Style.hover} py-3 px-5 flex items-center cursor-pointer `}>
                         <div>Launch Your Project Today</div>
                     </div>
                 </div>

@@ -1,12 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import viewSlice from "./slices/view"; 
 import threeStatusSlice from "./slices/hideThree"; 
-
+import popupSlice from "./slices/popup"
 
 export const store = configureStore({
   reducer: {
     view: viewSlice,
-    status : threeStatusSlice
+    status : threeStatusSlice,
+    popup : popupSlice
   },
 });
 
