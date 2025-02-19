@@ -27,15 +27,16 @@
     transition: 0.3s;
     /* filter: blur(1px); */
     /* animation: pulseGlow 2s infinite alternate; */
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 20%,var(--dark-color) 80%);
+    /* background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 20%,var(--dark-color) 80%); */
+    background: radial-gradient(circle, rgba(120, 119, 122, 0.5) 24%, #0b081d 101%)
    
 }
 .info path{
     transition: 0.5s;
-}
-.info:hover path{
     fill: white;
-
+}
+.info:hover {
+    transform: scale(1.05);
 }
 .info h4{
     text-transform: capitalize;
@@ -47,7 +48,7 @@
 .info p{
     font-size: var(--font-size-xs);
     line-height: -20px;
-    width: 80%;
+    /* width: 90%; */
     
 } 
 @media (min-width:640px) and (max-width:768px) {

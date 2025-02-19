@@ -78,6 +78,10 @@
     fill: var(--yellow-dark-color);
 
 }
+.icon:hover  .stroke path{
+    fill: unset;
+    stroke: var(--yellow-dark-color);
+}
 .icon:hover::before{
   opacity: 1;
   visibility: visible;

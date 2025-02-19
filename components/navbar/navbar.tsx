@@ -159,6 +159,34 @@ const Navbar :React.FC<PropsNav>  = ({callPopup}) => {
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);
+    const data  = [{
+      name : "+971 58 918 5328",
+      id : 1,
+      icon : <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 73 123" fill="none">
+      <g clip-path="url(#clip0_4482_8)">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.94 0H61.98C68 0 72.93 4.93 72.93 10.94V111.93C72.93 117.95 68 122.87 61.99 122.87H10.95C4.93 122.88 0 117.95 0 111.94V10.95C0 4.93 4.93 0 10.94 0ZM36.46 100.1C40.37 100.1 43.55 103.27 43.55 107.19C43.55 111.1 40.37 114.28 36.46 114.28C32.54 114.28 29.37 111.11 29.37 107.19C29.37 103.28 32.55 100.1 36.46 100.1ZM25.17 8.86H47.76C47.92 8.86 48.06 9 48.06 9.16V12.46C48.06 12.62 47.92 12.76 47.76 12.76H25.17C25.01 12.76 24.87 12.63 24.87 12.46V9.16C24.87 8.99 25 8.86 25.17 8.86ZM9.65 21.53H63.28C64.26 21.53 65.06 22.34 65.06 23.31V93.32C65.06 94.29 64.25 95.1 63.28 95.1H9.65C8.68 95.1 7.87 94.3 7.87 93.32V23.3C7.87 22.33 8.67 21.53 9.65 21.53Z" fill="white"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_4482_8">
+      <rect width="72.93" height="122.88" fill="white"/>
+      </clipPath>
+      </defs>
+      </svg>,
+      link : "tel:+971589185328"
+  },{
+      name : "info@arizglobal.com",
+      id : 3,
+      icon :<svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 13 13" fill="none">
+      <path d="M6.49998 6.01656L11.6919 2.68125C11.4831 2.52469 11.2297 2.43925 10.9687 2.4375H2.03123C1.77031 2.43925 1.51684 2.52469 1.30811 2.68125L6.49998 6.01656Z" fill="white"/>
+      <path d="M6.71938 6.84134L6.65031 6.87384H6.61781C6.58041 6.89055 6.54069 6.90151 6.5 6.90634C6.46628 6.91059 6.43216 6.91059 6.39844 6.90634H6.36594L6.29688 6.87384L0.853125 3.35571C0.827116 3.45384 0.813469 3.55483 0.8125 3.65634V9.34384C0.8125 9.66707 0.940904 9.97707 1.16946 10.2056C1.39802 10.4342 1.70802 10.5626 2.03125 10.5626H10.9688C11.292 10.5626 11.602 10.4342 11.8305 10.2056C12.0591 9.97707 12.1875 9.66707 12.1875 9.34384V3.65634C12.1865 3.55483 12.1729 3.45384 12.1469 3.35571L6.71938 6.84134Z" fill="white"/>
+      </svg>,
+      link : "mailto:info@arizglobal.com"
+  },{
+      name : "+971 4 224 3609",
+      id : 2,
+      icon : <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 122.88 122.27"><g><path fill="white" d="M33.84,50.25c4.13,7.45,8.89,14.6,15.07,21.12c6.2,6.56,13.91,12.53,23.89,17.63c0.74,0.36,1.44,0.36,2.07,0.11 c0.95-0.36,1.92-1.15,2.87-2.1c0.74-0.74,1.66-1.92,2.62-3.21c3.84-5.05,8.59-11.32,15.3-8.18c0.15,0.07,0.26,0.15,0.41,0.21 l22.38,12.87c0.07,0.04,0.15,0.11,0.21,0.15c2.95,2.03,4.17,5.16,4.2,8.71c0,3.61-1.33,7.67-3.28,11.1 c-2.58,4.53-6.38,7.53-10.76,9.51c-4.17,1.92-8.81,2.95-13.27,3.61c-7,1.03-13.56,0.37-20.27-1.69 c-6.56-2.03-13.17-5.38-20.39-9.84l-0.53-0.34c-3.31-2.07-6.89-4.28-10.4-6.89C31.12,93.32,18.03,79.31,9.5,63.89 C2.35,50.95-1.55,36.98,0.58,23.67c1.18-7.3,4.31-13.94,9.77-18.32c4.76-3.84,11.17-5.94,19.47-5.2c0.95,0.07,1.8,0.62,2.25,1.44 l14.35,24.26c2.1,2.72,2.36,5.42,1.21,8.12c-0.95,2.21-2.87,4.25-5.49,6.15c-0.77,0.66-1.69,1.33-2.66,2.03 c-3.21,2.33-6.86,5.02-5.61,8.18L33.84,50.25L33.84,50.25L33.84,50.25z"/></g></svg>,
+      link : "tel:+97142243609"
+  }]
     return ( <div  className={`${scrolled == 1 ? Style.navbarFixed :(scrolled == 2 ?Style.navbarFixedReturn:"")} ${Style.navbar} py-1 px-2 sm:px-5 md:px-10`}>
         {/* <div  onClick={()=>setIsOpen(!open)} className={`${Style.menuIcon} ${open ? Style.active :""} flex flex-col justify-center`}>
               <div ></div>
@@ -169,9 +197,17 @@ const Navbar :React.FC<PropsNav>  = ({callPopup}) => {
             {logo}
         </div>
         
-        <div className="flex items-center gap-5">
-            <div className={`flex items-center px-2  ${Style.phone}`}><Link href={"tel:+971589185328"}>+971 58 918 5328</Link></div>
-            <button onClick={()=>callPopup()} className="btn-yellosh hidden md:flex">get a Quote</button>
+        <div className="flex items-center lg:gap-5">
+        
+           {data.map((e,idx)=>(<div key={`Contact_Us_${e.name}_${idx}`} className={`flex items-center px-2 ${idx !=2?Style.hide:""} ${Style.phone}`}>
+           <Link className="flex gap-1 sm:gap-2 items-center" href={e.link}>
+            <div>
+               {e.icon}
+            </div>
+            {e.name}
+            </Link>
+          </div>))}
+            <button onClick={()=>callPopup()}  className="btn-yellosh hidden md:flex">get a Quote</button>
         </div>
     </div> );
 }

@@ -16,7 +16,7 @@
   --warning-color : #f59e0b ;
   /* Fonts */
   --font-size-3xl : clamp(2.8rem, 2vw + 0.8rem, 3.2rem);
-  --font-size-xxl : clamp(1.8rem, 0.86vw + 0.77rem, 2.4rem);
+  --font-size-xxl : clamp(2rem, 0.86vw + 0.77rem, 2.4rem);
   --font-size-xl : clamp(1.1rem, 0.71vw + 0.74rem, 1.6rem);
   --font-size-l : clamp(1rem, 0.57vw + 0.71rem, 1.4rem);
   --font-size-s : clamp(0.9rem, 0.43vw + 0.69rem, 1.2rem);
@@ -57,7 +57,7 @@ h1{
   font-size: var(--font-size-3xl);
 }
 h2{
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
 }
 h3{
   font-size: var(--font-size-l); 
@@ -262,7 +262,7 @@ form label{
 @media (max-width:1024px) {
 
   h2{
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-xxl);
   }
   h3{
     font-size: var(--font-size-xl);
@@ -277,10 +277,10 @@ form label{
 @media (max-width:768px) {
 
   h2{
-    /* font-size: var(--font-size-l); */
+    font-size: var(--font-size-xl);
   }
   h3{
-    /* font-size: var(--font-size-l); */
+    font-size: var(--font-size-l);
   }
   h4{
     /* font-size: var(--font-size-s); */
@@ -303,7 +303,7 @@ form label{
     font-size: var(--font-size-xl) !important;
   }
   h3{
-    /* font-size: var(--font-size-l); */
+    font-size: var(--font-size-l);
   }
   h4{
     font-size: var(--font-size-l);

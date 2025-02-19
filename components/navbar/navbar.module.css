@@ -8,6 +8,10 @@
     left: 0px;
     border-radius: 20px;
 }
+.navbar button{
+    font-weight: 700 !important;
+    font-size: 1rem;
+}
 .navbarFixed{
     animation: append 0.5s forwards;
 }
@@ -21,12 +25,17 @@
 }
 
 .phone{
-    font-weight: 700;
+    font-weight: 800;
     /* text-shadow: 0 2px 2px var(--dark-color),
     0 2px 2px white; */
+    font-size: 1.3rem;
     color: white;
     animation: movingShadow 3s infinite linear;
 
+}
+.container .phone svg{
+    width: 20px ;
+    height: 20px;
 }
 @keyframes append {
     from{
@@ -91,6 +100,48 @@
 .menuIcon.active div:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
+@media (max-width:1500px) {
+    
+    .phone{
+        font-size: 1rem;
+    }
+
+}
+@media (max-width:1200px) {
+    .navbar .phone svg{
+        width: 20px ;
+        height: 20px ;
+    }
+    .phone{
+        font-size: 0.8rem;
+    }
+    .navbar button{
+        font-size: 0.7rem;
+    }
+
+}
+@media (max-width:1070px) {
+    .navbar .phone svg{
+        width: 20px ;
+        height: 20px ;
+    }
+    .phone{
+        font-size: 0.8rem;
+    }
+    .navbar button{
+        font-size: 0.7rem;
+        display: none;
+    }
+
+}
+@media (max-width:880px) {
+    .hide{
+        display: none;
+    }
+    .phone{
+        font-size: 1rem;
+    }
+}
 @media (max-width:768px) {
     .navbar svg{
         width: 200px;
@@ -105,7 +156,7 @@
 }
 @media (max-width:500px) {
     .navbar svg{
-        width: 150px;
+        width: 200px;
     }
     .navbarFixed{
         animation: appendSmall 0.5s forwards;
@@ -113,11 +164,38 @@
     .navbarFixedReturn{
         animation: appendReturnSmall 0.5s forwards;  
     }
-    .phone{
-        font-size: 0.7rem;
-    }
+    
 
     
+}
+@media (max-width:400px) {
+    .phone{
+        font-size: 0.8rem;
+    }
+    .navbar .phone svg{
+        width: 15px;
+        height: 15px ;
+    }
+}
+@media (max-width:375px) {
+    .navbar svg{
+        width: 150px;
+    }
+    .phone{
+        font-size: 0.8rem;
+    } 
+
+}
+@media (max-width:325px) {
+    .navbar svg{
+        width: 140px;
+    }
+    .phone{
+        font-size: 0.8rem;
+    }
+    .navbar .phone svg{
+       display: none;
+    }   
 }
 @keyframes appendMedium {
     from{
