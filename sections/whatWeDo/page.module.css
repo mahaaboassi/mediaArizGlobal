@@ -30,7 +30,7 @@
     border-radius: 12px;
 }
 .card h4{
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xl);
     font-weight: 700;
     text-transform: capitalize;
     color: var(--main-color);
@@ -50,14 +50,21 @@
     font-weight: 600;
 
 }
-@media (max-width:768px) {
-    .card{
+@media (max-width:1024px) {
+    .card h4{
+        font-size: var(--font-size-l);
+    }  
+    .card p{
+        font-size: var(--font-size-xxs);
     }
     
 }
 @media (max-width:400px) {
     .card h4{
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-l);
     }  
+    .card p{
+        font-size: var(--font-size-xxs);
+    }
 
 }
