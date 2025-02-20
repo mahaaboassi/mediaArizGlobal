@@ -245,6 +245,10 @@ form label{
   display: block;
   font-size: var(--font-size-xs);
 }
+.proof .swiper-wrapper,.icons-section .swiper-wrapper{
+  transition-timing-function: linear !important;
+  
+}
 
 @media (max-width:1200px) {
   h1{

@@ -23,14 +23,15 @@ function Icons() {
         { name: "Google", icon: "/google.png" }
     ];
 
-    return (<div className={`px-6 md:px-14  ${Style.container}`}>
+    return (<div className={`px-6 md:px-14 icons-section  ${Style.container}`}>
         <Swiper
             modules={[Navigation, Pagination, Autoplay]}  // ✅ Include modules
             navigation ={false}
             loop={true}
             slidesPerView={3}
             pagination={false}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 0 }}
+            speed={10000}
             breakpoints={{
                 320: { slidesPerView: 3, spaceBetween: 10 }, // Small screens (mobile)
                 640: { slidesPerView: 4, spaceBetween: 15 }, // Tablets

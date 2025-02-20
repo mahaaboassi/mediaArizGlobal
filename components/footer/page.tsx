@@ -139,14 +139,14 @@ function Footer() {
         </div>
             <div className={`${Style.content}  grid grid-cols-1 lg:grid-cols-3 py-12 px-5 lg:gap-0 gap-8 sm:px-10 md:px-20`}>
                 <div className="flex flex-col gap-5 ">
-                    <h2>About Us</h2>
+                    <h3>About Us</h3>
                     <h6>Ariz Global was founded with the mission of delivering specialized marketing solutions. Our team boasts extensive expertise in professional public relations services and digital marketing, coupled with a global network of connections.</h6>
                     <div className="flex gap-2 items-center justify-start">
                         <Proof/>
                     </div>
                 </div>
                 <div className="flex flex-col gap-5">
-                    <h2>What We Do</h2>
+                    <h3>What We Do</h3>
                     <ul className="flex flex-col gap-3">
                         {ourWork.map((e,idx)=>(<li key={`Our_Work_${e.label}_${idx} `} className={`flex `}>
                             <div className={`${Style.iconWork} flex items-center`}><div>{e.icon}</div> </div>
@@ -159,7 +159,7 @@ function Footer() {
                     
                 </div>
                 <div className="flex flex-col gap-5">
-                    <h2>Contact Us</h2>
+                    <h3>Contact Us</h3>
                         <ul className="flex flex-col gap-3">
                             {dataContact.map((e,idx)=>(<li key={`Contact_Ariz_${e.name}_${idx} `} className={`flex `}>
                                 <Link className="flex" key={`Contact_Ariz_${e.name}_${idx} `} target="_blank" href={e.link}>
