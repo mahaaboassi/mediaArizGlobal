@@ -1,3 +1,4 @@
+import Proof from "../proof/page";
 import Style from "./page.module.css"
 import Link from "next/link";
 
@@ -140,13 +141,9 @@ function Footer() {
                 <div className="flex flex-col gap-5 ">
                     <h2>About Us</h2>
                     <h6>Ariz Global was founded with the mission of delivering specialized marketing solutions. Our team boasts extensive expertise in professional public relations services and digital marketing, coupled with a global network of connections.</h6>
-                    {/* <div className={`flex justify-center lg:justify-start pt-5 gap-5`}>
-                        {data.map((e,idx)=>{
-                            return <Link key={`Links_Ariz_Global_${e.name}`} href={e.link} target="_blank" aria-label={e.name} className={Style.icon} >
-                                {e.icon}
-                            </Link>
-                        })}
-                    </div> */}
+                    <div className="flex gap-2 items-center justify-start">
+                        <Proof/>
+                    </div>
                 </div>
                 <div className="flex flex-col gap-5">
                     <h2>What We Do</h2>
@@ -193,8 +190,17 @@ function Footer() {
                 
             
             </div>
-            <div className={` text-center py-2 ${Style.final}`}>
-             © Copyright 2024 by Ariz Global
+            <div className={` text-center flex justify-center flex-col gap-3 items-center pt-0 pb-2 md:py-2 ${Style.final}`}>
+                
+                     <div className={`flex justify-center lg:justify-start gap-3`}>
+                        {data.map((e,idx)=>{
+                            return <Link key={`Links_Ariz_Global_${e.name}`} href={e.link} target="_blank" aria-label={e.name} className={Style.icon} >
+                                {e.icon}
+                            </Link>
+                        })}
+                    </div>
+                
+             © Copyright 2025 by Ariz Global
             </div>
             
             
