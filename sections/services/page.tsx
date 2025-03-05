@@ -1,6 +1,5 @@
 "use client"
 import Header from "@/components/header/header";
-import Image from "next/image";
 import Style from "./page.module.css"
 import { useEffect, useState } from "react";
 
@@ -57,7 +56,7 @@ function Services() {
     return ( <div className={` ${Style.container} py-5 sm:py-10 px-5 sm:px-10 md:px-20`}>
         <Header title="We Have Served Diverse Clientele with Digital Marketing Services" upTitle="Our Services" dark={true} />
         
-        <div  className={` ${Style.slider} grid grid-cols-1 sm:grid-cols-2 mt-12 lg:grid-cols-3 flex gap-5 overflow-hidden`}>
+        <div  className={` ${Style.slider} grid grid-cols-1 sm:grid-cols-2 mt-12 lg:grid-cols-3 flex gap-5`}>
           {data.map((e,idx)=>(<div  className={``} key={`Images_services_${e.name}_${idx}`}>
                 <div className={`${Style.content}`}>
                     <div  className={`${Style.info} p-5 sm:p-7 flex flex-col justify-center items-center lg:p-8`}>
