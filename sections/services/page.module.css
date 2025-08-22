@@ -28,8 +28,8 @@
     /* filter: blur(1px); */
     /* animation: pulseGlow 2s infinite alternate; */
     /* background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 20%,var(--dark-color) 80%); */
-    /* background: radial-gradient(circle, hsla(260, 1%, 47%, .5) -19%, #0b081d 150%) */
-    background: var(--dark-color);
+    background: radial-gradient(circle, hsla(260, 1%, 47%, .5) -19%, #0b081d 150%)
+    /* background: var(--dark-color); */
     /* box-shadow: var(--box-universe); */
    
 }
